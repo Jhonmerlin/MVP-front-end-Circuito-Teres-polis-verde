@@ -37,7 +37,7 @@ Nosso projeto visa sanar as seguintes dores:
 - Trazer uma experiência agradavel ao usuário
 - Adaptabilidade a diferentes tipos de telas
 - Modo tela cheia
-- Imersão aos pontos turisticos de Teresó
+- Imersão aos pontos turisticos de Teresópolis
 
 
 ## Instruções de uso
