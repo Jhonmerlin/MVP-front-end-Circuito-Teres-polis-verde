@@ -41,7 +41,10 @@ Conectar visitantes à cidade de forma simples e intuitiva, fortalecendo o turis
 
 Para uso local, com todos os arquivos e modificações serem vistos localmente.
 
-- 1 PASSO: Clique em code ![Captura de tela_24-11-2025_111751_github com](https://github.com/user-attachments/assets/8cf02cb1-d617-4635-b056-a4f78e8f42bb)
-- 2 PASSO: Clique em download zip ![Captura de tela_24-11-2025_111814_github com](https://github.com/user-attachments/assets/9d73b210-9579-42a8-a766-ae632f3b5b40)
-- 3 PASSO: Descompacte o arquivo zip e abra o index <img width="334" height="62" alt="demonstracao" src="https://github.com/user-attachments/assets/048edcc0-48eb-43c1-94a4-3297e932f073" />
+- 1 PASSO: Clique em code
+  ![Captura de tela_24-11-2025_111751_github com](https://github.com/user-attachments/assets/8cf02cb1-d617-4635-b056-a4f78e8f42bb)
+- 2 PASSO: Clique em download zip
+  ![Captura de tela_24-11-2025_111814_github com](https://github.com/user-attachments/assets/9d73b210-9579-42a8-a766-ae632f3b5b40)
+- 3 PASSO: Descompacte o arquivo zip e abra o index
+  <img width="334" height="62" alt="demonstracao" src="https://github.com/user-attachments/assets/048edcc0-48eb-43c1-94a4-3297e932f073" />
 
