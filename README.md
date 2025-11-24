@@ -4,6 +4,12 @@
 Este projeto tem como objetivo simplificar, envolver e atrair visitantes para conhecer a beleza de Teresópolis.
 A plataforma oferece uma experiência acolhedora, pensada para facilitar a navegação e tornar o primeiro contato do usuário o mais receptivo possível.
 
+## Autores
+
+- Enzzo Rodrigues Fadiga,
+- Joao Victor Souza Fernandes 
+- Jonathan Bandeira Barboza (06000943)
+
 # 👥 Para administradores
 
 Os administradores contam com uma área de gestão completa, onde é possível:
