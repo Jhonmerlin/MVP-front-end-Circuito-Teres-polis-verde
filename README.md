@@ -48,3 +48,5 @@ Para uso local, com todos os arquivos e modificações serem vistos localmente.
 - 3 PASSO: Descompacte o arquivo zip e abra o index
   <img width="334" height="62" alt="demonstracao" src="https://github.com/user-attachments/assets/048edcc0-48eb-43c1-94a4-3297e932f073" />
 
+Ele pode ser acessado também sem download através do link :
+
