@@ -14,9 +14,16 @@ Os administradores contam com uma área de gestão completa, onde é possível:
 
 - Manter total controle do gerenciamento da aplicação
 
-# 🎯 Objetivo
+# 🎯 Qual o nosso objetivo? 
+Nosso projeto visa sanar as seguintes dores:
 
-Conectar visitantes à cidade de forma simples e intuitiva, fortalecendo o turismo e oferecendo uma ferramenta prática para administração de atividades locais.
+    Informação Dispersa e Desatualizada: Turistas têm dificuldade em encontrar, em um único local, informações atualizadas e detalhadas sobre as três Unidades de Conservação (PNSO, Três Picos e Montanhas de Teresópolis).
+
+    Falta de Gestão de Condições: A administração não possui uma ferramenta digital eficiente para configurar e comunicar de forma rápida a disponibilidade e os horários de funcionamento dos atrativos.
+
+    Falta de Acesso Conveniente: A ausência de um website otimizado e intuitivo dificulta a consulta por turistas em campo (mobile) ou por usuários que buscam planejar o passeio.
+
+
 
 
 ## Funcionalidades
@@ -24,14 +31,7 @@ Conectar visitantes à cidade de forma simples e intuitiva, fortalecendo o turis
 - Trazer uma experiência agradavel ao usuário
 - Adaptabilidade a diferentes tipos de telas
 - Modo tela cheia
-- Imersão aos pontos turisticos de Teresópolis
-
-
-## Autores
-
-- Enzzo Rodrigues Fadiga,
-- Joao Victor Souza Fernandes 
-- Jonathan Bandeira Barboza (06000943)
+- Imersão aos pontos turisticos de Teresó
 
 
 ## Instruções de uso
