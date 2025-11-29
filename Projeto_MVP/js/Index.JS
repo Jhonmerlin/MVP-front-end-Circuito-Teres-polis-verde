@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
+/* marca D'agua Fnsso F4jiga */
 // Sistema de login
 document.addEventListener('click', function(e) {
     if (e.target && e.target.matches('.login_button')) {
@@ -34,8 +34,13 @@ document.addEventListener('click', function(e) {
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
         
-        if (loginAdmin(username, password)) {
-            alert('Login realizado com sucesso!');
+        const result = login(username, password);
+        if (result.success) {
+            if (result.type === 'admin') {
+                alert('Login de administrador realizado com sucesso!');
+            } else {
+                alert(`Bem-vindo, ${result.user.nome}!`);
+            }
             toggleAdminLink();
             updateLoginInterface();
         } else {
