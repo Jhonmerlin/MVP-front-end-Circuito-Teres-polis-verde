@@ -4,6 +4,8 @@ class AgendaSystem {
         this.selectedDate = null;
         this.selectedTrilha = null;
         this.selectedHorario = null;
+        this.currentMonth = new Date().getMonth();
+        this.currentYear = new Date().getFullYear();
         this.trilhas = [
             {
                 id: 1,
@@ -58,15 +60,74 @@ class AgendaSystem {
     }
 /* marca D'agua Fnsso F4jiga */
     init() {
+        this.setupMonthNavigation();
         this.generateCalendar();
         this.setupEventListeners();
+    }
+
+    setupMonthNavigation() {
+        const monthSelect = document.getElementById('month-select');
+        const yearSelect = document.getElementById('year-select');
+        const prevBtn = document.getElementById('prev-month');
+        const nextBtn = document.getElementById('next-month');
+        
+        // Preencher anos (atual + 2 anos)
+        for (let year = this.currentYear; year <= this.currentYear + 2; year++) {
+            const option = document.createElement('option');
+            option.value = year;
+            option.textContent = year;
+            yearSelect.appendChild(option);
+        }
+        
+        // Definir valores atuais
+        monthSelect.value = this.currentMonth;
+        yearSelect.value = this.currentYear;
+        
+        // Event listeners
+        monthSelect.addEventListener('change', () => {
+            this.currentMonth = parseInt(monthSelect.value);
+            this.generateCalendar();
+        });
+        
+        yearSelect.addEventListener('change', () => {
+            this.currentYear = parseInt(yearSelect.value);
+            this.generateCalendar();
+        });
+        
+        prevBtn.addEventListener('click', () => {
+            if (this.currentMonth === 0) {
+                this.currentMonth = 11;
+                this.currentYear--;
+            } else {
+                this.currentMonth--;
+            }
+            this.updateSelectors();
+            this.generateCalendar();
+        });
+        
+        nextBtn.addEventListener('click', () => {
+            if (this.currentMonth === 11) {
+                this.currentMonth = 0;
+                this.currentYear++;
+            } else {
+                this.currentMonth++;
+            }
+            this.updateSelectors();
+            this.generateCalendar();
+        });
+    }
+    
+    updateSelectors() {
+        document.getElementById('month-select').value = this.currentMonth;
+        document.getElementById('year-select').value = this.currentYear;
     }
 
     generateCalendar() {
         const calendar = document.getElementById('calendar');
         const today = new Date();
-        const currentMonth = today.getMonth();
-        const currentYear = today.getFullYear();
+        
+        // Limpar calendário
+        calendar.innerHTML = '';
 
         // Cabeçalho dos dias da semana
         const weekDays = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
@@ -82,8 +143,8 @@ class AgendaSystem {
         });
 
         // Gerar dias do mês
-        const firstDay = new Date(currentYear, currentMonth, 1).getDay();
-        const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+        const firstDay = new Date(this.currentYear, this.currentMonth, 1).getDay();
+        const daysInMonth = new Date(this.currentYear, this.currentMonth + 1, 0).getDate();
 
         // Dias vazios no início
         for (let i = 0; i < firstDay; i++) {
@@ -97,7 +158,7 @@ class AgendaSystem {
             dayElement.textContent = day;
             dayElement.className = 'calendar-day';
             
-            const dayDate = new Date(currentYear, currentMonth, day);
+            const dayDate = new Date(this.currentYear, this.currentMonth, day);
             
             if (dayDate < today) {
                 dayElement.classList.add('disabled');
@@ -194,8 +255,21 @@ class AgendaSystem {
             <p><strong>Preço:</strong> ${this.selectedTrilha.preco} por pessoa</p>
         `;
         
+        // Preencher dados do usuário logado
+        this.fillUserData();
+        
         bookingSection.style.display = 'block';
         bookingSection.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    fillUserData() {
+        if (localStorage.getItem('userLoggedIn') === 'true') {
+            const currentUser = JSON.parse(localStorage.getItem('currentUser') || '{}');
+            
+            if (currentUser.nome) document.getElementById('nome').value = currentUser.nome;
+            if (currentUser.email) document.getElementById('email').value = currentUser.email;
+            if (currentUser.telefone) document.getElementById('telefone').value = currentUser.telefone;
+        }
     }
 
     setupEventListeners() {

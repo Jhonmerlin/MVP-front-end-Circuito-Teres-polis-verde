@@ -78,6 +78,52 @@ body {
     font-size: 1.5rem;
 }
 
+.month-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-btn:hover {
+    background: #5a6fd8;
+    transform: scale(1.1);
+}
+
+.month-select,
+.year-select {
+    padding: 0.5rem 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: white;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.month-select:focus,
+.year-select:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
 .calendar {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -309,11 +355,47 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+    .month-navigation {
+        gap: 0.5rem;
+    }
+    
+    .month-select,
+    .year-select {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .nav-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}
+
 @media (max-width: 500px) {
     .navbar {
         flex-direction: column;
         gap: 0.5rem;
         padding: 0.5rem;
+    }
+    
+    .month-navigation {
+        gap: 0.3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .month-select,
+    .year-select {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+        min-width: 80px;
+    }
+    
+    .nav-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
     }
     
     .agenda-main {

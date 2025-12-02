@@ -1,3 +1,22 @@
+// Função para adicionar evento de clique na logo
+function addLogoClickEvent() {
+    const logos = document.querySelectorAll('.logo_Dedo_Deus, .nav-logo img, .nav_logo img');
+    
+    logos.forEach(logo => {
+        logo.style.cursor = 'pointer';
+        logo.addEventListener('click', function() {
+            const currentPath = window.location.pathname;
+            const isSubProject = currentPath.includes('Sub_Projects');
+            
+            if (isSubProject) {
+                window.location.href = '../Index.html';
+            } else {
+                window.location.href = 'Index.html';
+            }
+        });
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const navToggle = document.getElementById('nav_toggle');
     const navContent = document.getElementById('nav_content');
@@ -24,6 +43,9 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.add('active');
         });
     });
+    
+    // Adicionar evento de clique na logo
+    addLogoClickEvent();
 });
 /* marca D'agua Fnsso F4jiga */
 // Sistema de login
