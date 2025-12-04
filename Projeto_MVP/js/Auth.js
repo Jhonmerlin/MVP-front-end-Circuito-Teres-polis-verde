@@ -101,8 +101,8 @@ function updateLoginInterface() {
                     <input type="text" placeholder="Login" class="login_input" id="username">
                     <input type="password" placeholder="Senha" class="login_input" id="password">
                     <button type="submit" class="login_button">Entrar</button>
+                    <button type="button" class="create_account_button" onclick="window.location.href='${createAccountPath}'">Criar Conta</button>
                 </form>
-                <a href="${createAccountPath}"><button class="create_account_button">Criar Conta</button></a>
             `;
         }
     }

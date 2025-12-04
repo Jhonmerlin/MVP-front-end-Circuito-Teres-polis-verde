@@ -44,9 +44,15 @@
                 </div>
 
                 <div class="admin-card" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                    <h3 style="color: #2c5530; margin-bottom: 1rem;">Usuários</h3>
+                    <h3 style="color: #2c5530; margin-bottom: 1rem;">👥 Usuários</h3>
                     <p>Visualizar e gerenciar usuários cadastrados</p>
                     <button class="trilhas_button" onclick="window.location.href='Usuarios.html'" style="margin-top: 1rem;">Ver Usuários</button>
+                </div>
+
+                <div class="admin-card" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    <h3 style="color: #2c5530; margin-bottom: 1rem;">🥾 Trilhas</h3>
+                    <p>Cadastrar e gerenciar trilhas disponíveis</p>
+                    <button class="trilhas_button" onclick="window.location.href='CadastroTrilha.html'" style="margin-top: 1rem;">Cadastrar Trilha</button>
                 </div>
 
             </div>
@@ -62,6 +68,7 @@
     </main>
 
     <script src="../js/Auth.js"></script>
+    <script src="../js/Index.js"></script>
     <script>
         // Verificar se usuário está logado como admin
         if (!isAdminLoggedIn()) {
