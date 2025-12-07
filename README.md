@@ -7,7 +7,7 @@ A plataforma oferece uma experiência acolhedora, pensada para facilitar a naveg
 ## Autores
 
 - Enzzo Rodrigues Fadiga,
-- Joao Victor Souza Fernandes 
+- Joao Victor Souza Fernandes (06012923)
 - Jonathan Bandeira Barboza (06000943)
 
 # 👥 Para administradores
